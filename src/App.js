@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { doc, setDoc } from "firebase/firestore";
 
-function App() {
+import { styled } from '@stitches/react';
+
+import "./App.css";
+import { blackA } from '@radix-ui/colors';
+import * as LabelPrimitive from '@radix-ui/react-label';
+
+function App({db}) {
+  const [inputValue, setInputValue] = useState('');
+  const todos = ["aaa", "bbb", "ccc"];
+
+  const todoStrip = (text, index) => {
+    return <li className='list-content' key={index}>{text}</li>;
+  };
+  
+  const onKeyDown = async (e) => {
+    if(e.code === 'Enter'){
+      await setDoc(doc(db, "ToDos", "test"), {
+        description: {inputValue}, 
+        done: false,
+      });
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="list-title">Shopping List</div>
+      {todos.map((todo, index) => todoStrip(todo, index))}
+      <input
+        onChange={setInputValue}
+        className="input-field"
+        type="text"
+        id="firstName"
+        defaultValue="Pedro Duarte"
+        onKeyDown={onKeyDown}
+      />
+    </>
   );
 }
 

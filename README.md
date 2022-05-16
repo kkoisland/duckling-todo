@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+```
+Start:
+npm i
+npm start
+http://localhost:3000
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+What we did:
+firebaseのサイトで、ducklingToDoを作成し、
+Analitics名: todo_duckling
+web app: DucklingToDoApp
+host: DucklingToDo
 
-## Available Scripts
+npm version
+{
+  npm: '8.5.5',
+  node: '14.19.1',
+  v8: '8.4.371.23-node.85',
+  uv: '1.42.0',
+  zlib: '1.2.11',
+  brotli: '1.0.9',
+  ares: '1.18.1',
+  modules: '83',
+  nghttp2: '1.42.0',
+  napi: '8',
+  llhttp: '2.1.4',
+  openssl: '1.1.1n',
+  cldr: '40.0',
+  icu: '70.1',
+  tz: '2021a3',
+  unicode: '14.0'
+}
 
-In the project directory, you can run:
+1. npm install firebase
 
-### `npm start`
+  2. 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC1e5GOmSJXYP_PUuoqM4NRyrrNRx_X90k",
+  authDomain: "ducklingtodo.firebaseapp.com",
+  projectId: "ducklingtodo",
+  storageBucket: "ducklingtodo.appspot.com",
+  messagingSenderId: "429815563004",
+  appId: "1:429815563004:web:d8a18e5ee452cdd8410d79",
+  measurementId: "G-5ECHXC5DMQ"
+};
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
-### `npm test`
+3.
+npm install -g firebase-tools
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4.
+npm install @radix-ui/react-checkbox
+npm install -g npm@8.5.5
+npm install react@17.0.2
+npm install react-dom@17.0.2
+install @radix-ui/react-checkbox
+install @radix-ui/react-label
+npm install @stitches/react
+npm install @radix-ui/colors
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
