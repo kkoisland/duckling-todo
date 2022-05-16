@@ -4,6 +4,10 @@ npm i
 npm start
 http://localhost:3000
 
+Site:
+https://firebase.google.com/docs/firestore/quickstart?hl=en&authuser=0
+https://firebase.google.com/docs/firestore/manage-data/add-data?hl=ja
+
 What we did:
 firebaseのサイトで、ducklingToDoを作成し、
 Analitics名: todo_duckling
